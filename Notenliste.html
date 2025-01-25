@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<header>
+  <nav class="navigation">
+    <ul>
+      <li><a href="Absenzenliste.php">Absenzen</a></li>
+      <li><a href="Notenliste.php">Noten</a></li>
+      <li><a href="Schueler.php">Schueler</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <h1>Notenliste</h1>
+
+  <!-- Features-Bereich -->
+  <section class="features">
+    <h2>Features</h2>
+
+    <!-- Filter nach Name -->
+    <div>
+      <label for="filterName">Name:</label>
+      <input type="text" id="filterName" placeholder="Name eingeben">
+    </div>
+
+    <!-- 2) Filter (z.B. Fach auswählen) -->
+    <div class="feature-group">
+      <label for="filterFach">Fach:</label>
+      <select id="filterFach">
+        <option value="">Alle</option>
+        <option value="Englisch">Englisch</option>
+        <option value="Mathe">Mathe</option>
+        <option value="Deutsch">Deutsch</option>
+        <option value="Franzoesisch">Franzoesisch</option>
+      </select>
+    </div>
+
+    <!-- Filter nach Note (min / max) -->
+    <div>
+      <label for="filterMinNote">Note min:</label>
+      <input type="number" id="filterMinNote" step="0.1" placeholder="z.B. 4.0" style="width: 70px;">
+
+      <label for="filterMaxNote">Note max:</label>
+      <input type="number" id="filterMaxNote" step="0.1" placeholder="z.B. 6.0" style="width: 70px;">
+    </div>
+
+    <button type="button" onclick="applyFilters()">Filter anwenden</button>
+
+    <!-- 3) Liste exportieren -->
+    <div style="margin-top: 1rem;">
+      <button type="button">Liste exportieren</button>
+    </div>
+
+    <a href="NoteHinzufuegen.php" class="btn">Neue Absenz hinzufügen</a>
+
+  </section>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Fach</th>
+      <th>Note</th>
+      <th>Datum</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Beispiel-Einträge: Du kannst sie dynamisch oder manuell befüllen -->
+    <tr>
+      <td>test</td>
+      <td>test</td>
+      <td>test</td>
+      <td>test</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
+</main>
+</body>
+</html>
