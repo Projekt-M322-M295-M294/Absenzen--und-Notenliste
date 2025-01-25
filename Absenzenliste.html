@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Absenzen</title>
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+</head>
+<body>
+  <header>
+    <nav class="navigation">
+      <ul>
+        <li><a href="Absenzenliste.php">Absenzen</a></li>
+        <li><a href="Notenliste.php">Noten</a></li>
+        <li><a href="Schueler.php">Schueler</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Absenzenliste</h1>
+
+    <!-- Features-Bereich -->
+
+    <section class="features">
+    <h2>Features</h2>
+
+    <!-- Filter nach Name und Grund -->
+    <div class="filter-group">
+      <label for="filterName">Name:</label>
+      <input type="text" id="filterName" placeholder="Name eingeben">
+    </div>
+    <div class="filter-group">
+      <label for="filterGrund">Grund:</label>
+      <input type="text" id="filterGrund" placeholder="z.B. Krankheit, Urlaub ...">
+    </div>
+
+    <!-- Filter nach Datum (Von - Bis) -->
+    <div class="filter-group">
+      <label for="filterDateFrom">Von:</label>
+      <input type="date" id="filterDateFrom">
+      <label for="filterDateTo">Bis:</label>
+      <input type="date" id="filterDateTo">
+    </div>
+
+    <!-- Filter nach Status -->
+    <div class="filter-group">
+      <label for="filterStatus">Status:</label>
+      <select id="filterStatus">
+        <option value="">Alle</option>
+        <option value="Entschuldigt">Entschuldigt</option>
+        <option value="Unentschuldigt">Unentschuldigt</option>
+        <!-- Wenn du weitere Statuswerte hast, hier ergänzen -->
+      </select>
+    </div>
+
+    <button type="button" onclick="applyFilters()">Filter anwenden</button>
+
+    <!-- 3) Liste exportieren -->
+    <div style="margin-top: 1rem;">
+      <button type="button">Liste exportieren</button>
+    </div>
+
+    <a href="AbsenzHinfufuegen.php" class="btn">Neue Absenz hinzufügen</a>
+    </section>
+
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Datum</th>
+        <th>Grund</th>
+        <th>Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <!-- Beispiel-Einträge: Du kannst sie dynamisch oder manuell befüllen -->
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
